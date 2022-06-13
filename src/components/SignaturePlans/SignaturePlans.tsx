@@ -1,7 +1,9 @@
+import { useEffect, useState } from "react";
 import PlanCard from "./PlanCard/PlanCard"
 
-export default function SignaturePlans() {
-    const discount = 2;
+export default function SignaturePlans({annual}: {annual: boolean}) {
+    const importedDiscount = 12*((100 - 15)/100)
+    const [discount, setDiscount] = useState<number>(1);
     const signaturePlans = [
         {
             name: "Free",
@@ -24,6 +26,7 @@ export default function SignaturePlans() {
             price: 20
         }
     ]
+    useEffect(() => annual ? setDiscount(importedDiscount) : setDiscount(1))
     
     return (
         <div>
@@ -31,6 +34,5 @@ export default function SignaturePlans() {
                 <PlanCard key={index} {...item} discount={discount}/>
             )}
         </div>
-    
     ) 
 }

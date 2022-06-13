@@ -1,7 +1,11 @@
 import { useState } from "react"
 
-export default function Frequency() {
-    const [annual, setAnnual] = useState(false)
+interface Props {
+    annual: boolean
+    setAnnual: (annual: boolean) => void
+}
+
+export default function Frequency({ annual, setAnnual}: Props) {
     return (
         <div>
             <form>
