@@ -1,9 +1,11 @@
-export default function PlanCard({ name, features, price, discount}: {name: string, features: string[], price: number, discount: number} ) {
+import style from './style.module.scss';
+
+export default function PlanCard({ name, features, price, discount, bestPlan}: {name: string, features: string[], price: number, discount: number, bestPlan: boolean} ) {
     return (
-        <div>
+        <div className={`${style.PlanCard} ${bestPlan ? style.bestPlan : ''}`}>
             <h3>{name}</h3>
-            {features.map((item: string, index) => (<li key={index}>{item}</li>))}
             <p>$ {price*discount}</p>
+            {features.map((item: string, index) => (<li key={index}>{item}</li>))}
         </div>
     ) 
 }

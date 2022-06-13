@@ -1,11 +1,9 @@
-import { useState } from "react"
-
 interface Props {
-    annual: boolean
-    setAnnual: (annual: boolean) => void
+    annually: boolean
+    setAnnual: (annually: boolean) => void
 }
 
-export default function Frequency({ annual, setAnnual}: Props) {
+export default function Frequency({ annually, setAnnual}: Props) {
     return (
         <div>
             <form>
@@ -14,12 +12,11 @@ export default function Frequency({ annual, setAnnual}: Props) {
                     type="checkbox" 
                     name="freq" 
                     id="freq" 
-                    checked={annual}
-                    onChange={event => setAnnual(!annual)}
+                    checked={annually}
+                    onChange={event => setAnnual(!annually)}
                 />
-                <label htmlFor="freq">Annual</label>
+                <label htmlFor="freq">Annually</label>
             </form>
-        <div>{annual? `marcado` : `desmarcado`}</div>
         </div>
     ) 
 }

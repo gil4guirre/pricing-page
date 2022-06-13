@@ -4,15 +4,15 @@ import Frequency from './components/Frequency/Frequency';
 import SignaturePlans from './components/SignaturePlans/SignaturePlans';
 
 function App() {
-  const [annual, setAnnual] = useState(false)
+  const [annually, setAnnual] = useState(false)
   return (
     <div className="App">
       TÍTULO
       <Frequency 
-        annual={annual}
+        annually={annually}
         setAnnual={setAnnual}
       />
-      <SignaturePlans annual={annual}/>
+      <SignaturePlans annually={annually}/>
     </div>
   );
 }
