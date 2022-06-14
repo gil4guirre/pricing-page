@@ -1,0 +1,38 @@
+.PlanCard {
+    border: 2px solid #000;
+    min-width: 20%;
+    margin: 7px;
+    box-shadow: 5px 5px 5px #444;
+    padding: 20px 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    height: 300px;
+        
+    h3 {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+
+    p {
+        text-align: center;
+        font-size: 2rem;
+        margin: 20px 0;
+    }
+
+    div {
+        margin: 0 0 20px 0;
+        li {
+            list-style: none;
+            font-size: 1.3rem;
+        }
+    }
+    
+}
+
+.bestPlan {
+    border: 3px solid #509;
+    background-color: #c9bfff;
+    height: 320px;
+}

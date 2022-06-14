@@ -1,0 +1,17 @@
+.Button {
+    align-self: center;
+    background-color: #956ef0;
+    border-radius: 10px;
+    box-shadow: 2px 4px 4px #0000009F;
+    color: #272626;
+    cursor: pointer;
+    font-size: 1.25rem;
+    padding: 8px 16px;
+    width: 150px;
+    border: 2px solid #000;
+    
+    &:active {
+      background-color: #956ef0;
+      box-shadow: 2px 2px 4px #0000009F inset;
+    }
+  }

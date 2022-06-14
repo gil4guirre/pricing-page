@@ -1,4 +1,4 @@
-import style from "./style.module.scss";
+import style from './Frequency.module.scss';
 interface Props {
     importedDiscount: number
     annually: boolean

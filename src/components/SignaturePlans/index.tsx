@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import PlanCard from "./PlanCard/PlanCard";
-import style from "./style.module.scss";
+import PlanCard from "./PlanCard";
+import style from "./SignaturePlans.module.scss";
 
 export default function SignaturePlans({annually, importedDiscount}: {annually: boolean, importedDiscount: number}) {
     const discountMath = 12*((100 - importedDiscount)/100)
@@ -14,20 +14,20 @@ export default function SignaturePlans({annually, importedDiscount}: {annually: 
         },
         {
             name: "Awesome",
-            features: ["Feature 1 Plus", "Feature 2 plus", "Awesome Feature 1", "Awesome Feature 2"],
-            price: 10,
+            features: ["Feature 1", "Feature 2", "Awesome Feature 1", "Awesome Feature 2"],
+            price: 9.99,
             bestPlan: false
         },
         {
-            name: "Super Awesome",
-            features: ["Feature 1 & 2 Plus", "Awesome Feature 1 & 2 plus", "Super Awesome Feature 1", "Super Awesome Feature 2"],
-            price: 20,
+            name: "Super",
+            features: ["Feature 1 & 2", "Awesome Feature 1 & 2", "Super Feature 1", "Super Feature 2"],
+            price: 19.99,
             bestPlan: true
         },
         {
-            name: "Extra Super Awesome",
-            features: ["Feature 1 & 2 Plus", "Awesome Feature 1 & 2 plus", "Super Awesome Feature 1 & 2 plus", "Extra Super Awesome Feature"],
-            price: 40,
+            name: "Extra",
+            features: ["Feature 1 & 2", "Awesome Feature 1 & 2", "Super Feature 1 & 2", "Extra Feature"],
+            price: 39.99,
             bestPlan: false
         }
     ]

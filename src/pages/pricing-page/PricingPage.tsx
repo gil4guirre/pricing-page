@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
-import Frequency from './components/Frequency/Frequency';
-import SignaturePlans from './components/SignaturePlans/SignaturePlans';
+import Frequency from '../../components/Frequency';
+import Header from '../../components/Header';
+import SignaturePlans from '../../components/SignaturePlans';
+import style from './PricingPage.module.scss';
 
-function App() {
+function PricingPage() {
   const [annually, setAnnual] = useState(false)
   const importedDiscount = 15;
   return (
-    <div className="App">
-      TÍTULO
+    <div className={style.PricingPage}>
+      <Header />
       <Frequency 
         importedDiscount={importedDiscount}
         annually={annually}
@@ -21,4 +23,4 @@ function App() {
   );
 }
 
-export default App;
+export default PricingPage;
