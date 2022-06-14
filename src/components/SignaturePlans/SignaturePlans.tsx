@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import PlanCard from "./PlanCard/PlanCard";
 import style from "./style.module.scss";
 
-export default function SignaturePlans({annually}: {annually: boolean}) {
-    const importedDiscount = 12*((100 - 15)/100)
+export default function SignaturePlans({annually, importedDiscount}: {annually: boolean, importedDiscount: number}) {
+    const discountMath = 12*((100 - importedDiscount)/100)
     const [discount, setDiscount] = useState<number>(1);
     const signaturePlans = [
         {
@@ -31,7 +31,7 @@ export default function SignaturePlans({annually}: {annually: boolean}) {
             bestPlan: false
         }
     ]
-    useEffect(() => annually ? setDiscount(importedDiscount) : setDiscount(1), [annually, importedDiscount])
+    useEffect(() => annually ? setDiscount(discountMath) : setDiscount(1), [annually, discountMath])
     
     return (
         <div className={style.SignaturePlans}>
